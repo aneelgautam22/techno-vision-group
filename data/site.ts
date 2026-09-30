@@ -12,7 +12,10 @@ type SiteInfo = {
     | "mapUrl",
     string | null
   >;
-  social: Record<"facebook" | "instagram" | "linkedin", string | null>;
+  social: Record<
+    "facebook" | "tiktok" | "instagram" | "linkedin",
+    string | null
+  >;
   owner: {
     name: string;
     title: string;
@@ -27,7 +30,7 @@ export const site: SiteInfo = {
   contact: {
     address: null,
     phone: "9851169210",
-    email: null,
+    email: "techno.vision.np@gmail.com",
     hours: null,
     whatsapp: null,
     mapEmbedUrl:
@@ -35,7 +38,14 @@ export const site: SiteInfo = {
     mapUrl:
       "https://www.google.com/maps/place/28%C2%B014'03.6%22N+83%C2%B059'19.3%22E/@28.2342279,83.9877718,18.5z/data=!4m4!3m3!8m2!3d28.234324!4d83.988693!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D",
   },
-  social: { facebook: null, instagram: null, linkedin: null },
+  social: {
+    facebook:
+      "https://www.facebook.com/share/1CEG4CzdhD/?mibextid=wwXIfr",
+    tiktok:
+      "https://www.tiktok.com/@technovision343?_r=1&_t=ZS-9A1YkbNeMi5",
+    instagram: null,
+    linkedin: null,
+  },
   owner: {
     name: "Er. Milan Adhikari",
     title: "Owner",

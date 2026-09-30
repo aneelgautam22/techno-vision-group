@@ -71,15 +71,19 @@ export default function About() {
                 />
               </div>
               <figcaption>Techno Vision Group</figcaption>
+              <p className="about-established">
+                ESTABLISHED <span aria-hidden="true">•</span> 2017 A.D.
+              </p>
             </figure>
           </div>
           <div className="about-prose">
             <p>
-              Techno Vision Group is the professional identity through which
-              Techno Vision Engineering Consultancy and Techno Vision Nirman
-              Sewa are presented together. The two businesses connect technical
-              thinking with practical work on site while retaining their clear
-              areas of responsibility.
+              Established in 2017 A.D., Techno Vision Group provides engineering
+              consultancy and construction services, bringing technical planning
+              and practical on-site execution together. It is the professional
+              identity through which Techno Vision Engineering Consultancy and
+              Techno Vision Nirman Sewa are presented together, with each
+              business retaining its clear area of responsibility.
             </p>
             <p>
               Techno Vision Engineering Consultancy supports projects through

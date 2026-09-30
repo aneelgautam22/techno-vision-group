@@ -202,7 +202,7 @@ function validate(payload: EnquiryPayload): Enquiry | null {
     phoneDigits.length < 7 ||
     phoneDigits.length > 15 ||
     !/^\+?[0-9][0-9 ()-]{6,20}$/.test(phone) ||
-    !validEmail(email) ||
+    (email !== "" && !validEmail(email)) ||
     !services.has(service) ||
     message.length < 10 ||
     message.length > 5000
@@ -345,7 +345,7 @@ export async function onRequestPost({ request, env }: PagesContext) {
       body: JSON.stringify({
         from,
         to: [to],
-        reply_to: enquiry.email,
+        ...(enquiry.email ? { reply_to: enquiry.email } : {}),
         subject: "New Website Enquiry - Techno Vision Group",
         html: emailHtml(enquiry, submittedAt),
         text: emailText(enquiry, submittedAt),

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Brand } from "@/components/ui";
+import { SocialLinks } from "@/components/social-links";
 import { companies, navigation, site } from "@/data/site";
 export function Footer() {
   return (
@@ -72,9 +73,19 @@ export function Footer() {
         <div className="footer-bottom">
           <span>
             © {new Date().getFullYear()} Techno Vision Group. All rights
-            reserved.
+            reserved.{" "}
+            <span className="footer-developer-credit">
+              <span aria-hidden="true">•</span> Website by{" "}
+              <strong>Agnex Technology</strong>
+            </span>
           </span>
           <span>Engineering • Consultancy • Construction</span>
+          {site.contact.email && (
+            <a className="footer-email" href={`mailto:${site.contact.email}`}>
+              {site.contact.email}
+            </a>
+          )}
+          <SocialLinks className="footer-social-links" />
           <a href="#top">Back to top ↑</a>
         </div>
       </div>

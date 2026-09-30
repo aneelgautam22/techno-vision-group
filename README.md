@@ -51,4 +51,4 @@ In Resend, add and verify the sending domain, configure its DNS records, and cre
 
 The ordinary Next.js dev server does not execute the `functions/` directory. To test the Function by itself locally, create an ignored `.dev.vars` file containing the three variables, then run `pnpm dlx wrangler pages dev public` and POST test JSON to the Wrangler URL at `/api/enquiries`. An integrated website-and-Function preview requires the final Cloudflare Pages build output directory. Never commit a real API key; `.env*` and `.dev.vars*` are ignored.
 
-The confirmed phone number and owner identity are configured. No address, email, client counts, awards or testimonials have been invented. See ASSET_CREDITS.md and QA.md for provenance and verification.
+The confirmed phone number, official email, establishment year, owner identity and social profiles are configured. No address, client counts, awards or testimonials have been invented. See ASSET_CREDITS.md and QA.md for provenance and verification.

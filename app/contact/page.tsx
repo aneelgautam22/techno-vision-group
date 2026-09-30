@@ -1,5 +1,6 @@
 import { PageHero, ServiceIcon } from "@/components/ui";
 import { ContactForm } from "@/components/contact-form";
+import { SocialLinks } from "@/components/social-links";
 import { pageMetadata } from "@/lib/metadata";
 import { site } from "@/data/site";
 export const metadata = pageMetadata(
@@ -61,6 +62,10 @@ export default function Contact() {
                 </div>
               )}
             </dl>
+            <div className="contact-socials">
+              <p>Follow Techno Vision Group</p>
+              <SocialLinks showLabels />
+            </div>
           </aside>
           <ContactForm />
         </div>

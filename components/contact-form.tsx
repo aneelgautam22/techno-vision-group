@@ -58,7 +58,7 @@ export function ContactForm() {
         name,
         message,
         phone,
-        email: String(data.get("email")).trim(),
+        email: String(data.get("email") || "").trim(),
         service: String(data.get("service")),
         formElapsedMs: Date.now() - formStartedAt.current,
         submissionId: submissionId.current,
@@ -79,7 +79,8 @@ export function ContactForm() {
     <form ref={form} className="contact-form" onSubmit={submit}>
       <h2>Tell us about your project.</h2>
       <p>
-        Share a few details to start the conversation. All fields are required.
+        Share a few details to start the conversation. Email is optional; all
+        other fields are required.
       </p>
       <div className="form-grid">
         <label htmlFor="name">
@@ -111,13 +112,12 @@ export function ContactForm() {
           />
         </label>
         <label htmlFor="email">
-          Email Address
+          Email Address (Optional)
           <input
             id="email"
             name="email"
             type="email"
             autoComplete="email"
-            required
             maxLength={254}
             placeholder="Your email address"
           />
